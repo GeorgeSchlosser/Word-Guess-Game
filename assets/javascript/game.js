@@ -5,15 +5,23 @@
     alert("We have such sights to show you");
     console.log(alert);
 
-    // div for wins, guesses remaining,
+    // connect to div for wins, guesses remaining,
     var wins = 0;
-    // var guesses = wordbank[x].length;
     var lives;
     // case sensitivity?
-    var wordbank = ["Freddy","Jason", "redrum"];
+    var wordbank = ["Freddy","Jason", "redrum", "xenomorph", "cenobite", "Ash", "tuttifrutti", "Elvira", "Romero", "Pazuzu", "Regan", "witch"];
+
+    for (let b = 0; b < wordbank.length; b++) {
+        const element = wordbank[b];
+        console.log(wordbank[b].length);
+    }
+    // console.log(wordbank[b].length);
+    // var guesses = wordbank[x].length;
+    // var x = randomly picked wordbankitem
+        // require for loop and/or shuffle function, Fisher-Yates?
     // var playerGuess = keyInput;
     var lettersGuessed;
-    // function to print lettersGuessed;
+    // function to print/store lettersGuessed;
 
 
     // Display Blank Characters of Current Word FUNCTION 
