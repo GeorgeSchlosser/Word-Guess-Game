@@ -4,30 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="assets\javascript/game.js"></script>
+    <title>Hangman Horror</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 </head>
 <body>
+    <div class="container">
+        
+        <div class="jumbotron">
+            <h1>The Horror of Hangman!!!</h1>
+            <p>Guess words from a selection of George's Favorite Horror Films</p>
+            <p>Press Any Key to Begin</p>
+        </div>
 
-<script>
-    //Press any key to get started!
-    // onclick.start script
+        <div class="card text-left">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Current Word</h4>
+                <p class="card-text">_____</p>
+            </div>
+        </div>
 
-    // "We have such sights to show you"
+        <div class="card text-left">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Guesses Remaining</h4>
+                <p class="card-text">6</p>
+            </div>
+        </div>
 
-    // var wins;
-    // var guesses;
-    // var lives;
-    // var lettersGuessed;
-    // function to print lettersGuessed
+        <div class="card text-left">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Already Guessed</h4>
+                <p class="card-text">xxx</p>
+            </div>
+         </div>
+
+        <div class="card text-left">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Wins</h4>
+                <p class="card-text">0</p>
+            </div>
+        </div>
+
+    </div>
 
 
-    // Display Blank Characters of Current Word FUNCTION
-
-    // Number of Guesses Remaining: xx 
-
-    
-</script>
 
 </body>
+<script src="assets\javascript/game.js"></script>
 </html>

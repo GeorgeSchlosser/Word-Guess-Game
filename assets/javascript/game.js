@@ -11,14 +11,17 @@
     // case sensitivity?
     var wordbank = ["Freddy","Jason", "redrum", "xenomorph", "cenobite", "Ash", "tuttifrutti", "Elvira", "Romero", "Pazuzu", "Regan", "witch"];
 
-    for (let b = 0; b < wordbank.length; b++) {
+    for (var b = 0; b < wordbank.length; b++) {
         const element = wordbank[b];
+        // what is this^?
         console.log(wordbank[b].length);
+        console.log(wordbank[b]);
     }
+
     // console.log(wordbank[b].length);
     // var guesses = wordbank[x].length;
     // var x = randomly picked wordbankitem
-        // require for loop and/or shuffle function, Fisher-Yates?
+    // require for loop and/or shuffle function, Fisher-Yates?
     // var playerGuess = keyInput;
     var lettersGuessed;
     // function to print/store lettersGuessed;
