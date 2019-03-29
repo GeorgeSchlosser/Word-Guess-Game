@@ -22,9 +22,11 @@ console.log(guesses);
 
 function startGame () {
     currentWord = wordbank[Math.floor(Math.random() * wordbank.length)];
+    wordLetters = currentWord.split("");
 
     // Testing
     console.log(currentWord);
+    console.log(wordLetters);
 }
 
 //MAIN PROCESS(Call Functions To Do Things)
