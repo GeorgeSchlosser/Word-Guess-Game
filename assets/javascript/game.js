@@ -49,6 +49,54 @@ function startGame () {
     console.log(blanksGuesses); //WOOT!
 }
 
+function checkLetters(letter) {
+    // check if letter exists in word
+    // alert(letter);
+    var letterInWord = false;
+
+    for (var i = 0; i < blanks; i++) {
+        if(currentWord[i] == letter) {
+            letterInWord = true;
+            // alert("letter found");
+        }
+        
+    }
+    // find where in word letter is, then populate blanksGuesses
+    if(letterInWord) {
+        for (var i = 0; i < blanks; i++) {
+            if(currentWord[i] == letter) {
+                blanksGuesses[i] = letter;
+            }
+        }
+    }
+
+    else {
+        wrongGuesses.push(letter);
+        guesses--;
+    }
+}
+
+function roundOver() {
+    console.log("Win Count: " + wins + " | Guesses Left " + guesses)
+
+    document.getElementById("guessesLeft").innerHTML = guesses;
+    document.getElementById("currentWord").innerHTML = blanksGuesses.join("  ");
+    document.getElementById("lettersGuessed").innerHTML = wrongGuesses.join("  ");
+
+    if (wordLetters.toString() == blanksGuesses.toString()) {
+        wins++;
+        alert("You Survived!");
+
+        document.getElementById("wins").innerHTML = wins;
+        startGame()
+    }
+
+    else if (guesses == 0) {
+        alert("Trouble Breathing?");
+        startGame();
+    }
+}
+
 //MAIN PROCESS(Call Functions To Do Things)
 //====================================================================================
 
@@ -57,6 +105,10 @@ startGame ();
 
 // register key clicks
 document.onkeyup = function(event) {
-    var lettersGuessed = String.fromCharCode(event.keyCode).toLocaleLowerCase();
-    // alert(lettersGuessed);
+    var letterGuessed = String.fromCharCode(event.keyCode).toLocaleLowerCase();
+    checkLetters(letterGuessed);
+    roundOver();
+    
+    // testing
+    console.log(letterGuessed);
 }
