@@ -1,0 +1,9 @@
+/* red: BF0500
+medium dark red: 7F0300
+bright red: FF0700
+dark red: 400200
+less bright red: E50600 */
+
+.dRedBack {
+background-color: #400200;
+}
