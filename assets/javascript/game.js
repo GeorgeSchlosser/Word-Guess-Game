@@ -15,9 +15,18 @@ var guesses = 6;
 // Tests
 console.log(wordbank);
 console.log(guesses);
+
+
 //FUNCTIONS
 //====================================================================================
 
+function startGame () {
+    currentWord = wordbank[Math.floor(Math.random() * wordbank.length)];
+
+    // Testing
+    console.log(currentWord);
+}
+
 //MAIN PROCESS(Call Functions To Do Things)
 //====================================================================================
-
+startGame ();
