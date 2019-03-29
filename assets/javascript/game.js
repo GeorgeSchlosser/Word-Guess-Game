@@ -36,6 +36,12 @@ function startGame () {
         
     }
 
+    // alter DOM
+    document.getElementById("currentWord").innerHTML = blanksGuesses.join("  ");
+    document.getElementById("guessesLeft").innerHTML = guesses;
+    // document.getElementById("lettersGuessed").innerHTML = wrongGuesses;
+    document.getElementById("wins").innerHTML = wins;
+
     // Testing
     console.log(currentWord);
     console.log(wordLetters);
@@ -45,4 +51,12 @@ function startGame () {
 
 //MAIN PROCESS(Call Functions To Do Things)
 //====================================================================================
+
+// initiate code first time
 startGame ();
+
+// register key clicks
+document.onkeyup = function(event) {
+    var lettersGuessed = String.fromCharCode(event.keyCode).toLocaleLowerCase();
+    // alert(lettersGuessed);
+}
