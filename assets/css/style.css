@@ -7,3 +7,11 @@ less bright red: E50600 */
 .dRedBack {
 background-color: #400200;
 }
+
+.medRedBack {
+    background-color: #7F0300;
+}
+
+.redBorder {
+    border: 1px solid #FF0700;
+}
