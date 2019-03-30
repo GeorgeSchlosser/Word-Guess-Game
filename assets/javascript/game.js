@@ -112,3 +112,5 @@ document.onkeyup = function(event) {
     // testing
     console.log(letterGuessed);
 }
+
+alert("We have such sights to show you");
